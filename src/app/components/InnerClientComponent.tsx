@@ -1,10 +1,10 @@
 "use client"
 import { useEffect } from "react";
 
-export default async function InnerClientComponent(serverProps: {serverProps: string}) {
+export default function InnerClientComponent(serverProps: {serverProps: string}) {
   useEffect(() => {
-    console.log()
-  })
+    console.log(serverProps.serverProps)
+  }, [serverProps.serverProps])
 
 
   return (
